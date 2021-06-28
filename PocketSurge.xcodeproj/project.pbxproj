@@ -1,0 +1,798 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		608F19E1B13101C2B369E74D /* Pods_PocketSurge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AE065122650CE5E892970E /* Pods_PocketSurge.framework */; };
+		9E330F33268A510B00E99152 /* AddBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E330F32268A510B00E99152 /* AddBillsViewController.swift */; };
+		9E330F36268A5EA900E99152 /* BillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E330F35268A5EA900E99152 /* BillsTableViewCell.swift */; };
+		9EA34C2E2689188B00B2E8DB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA34C2D2689188B00B2E8DB /* DashboardViewController.swift */; };
+		9EBBF3E3268625E300F56FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF3E2268625E300F56FDB /* AppDelegate.swift */; };
+		9EBBF3E5268625E300F56FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF3E4268625E300F56FDB /* SceneDelegate.swift */; };
+		9EBBF3E7268625E300F56FDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF3E6268625E300F56FDB /* LoginViewController.swift */; };
+		9EBBF3EA268625E300F56FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBBF3E8268625E300F56FDB /* Main.storyboard */; };
+		9EBBF3EC268625EA00F56FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBBF3EB268625EA00F56FDB /* Assets.xcassets */; };
+		9EBBF3EF268625EA00F56FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBBF3ED268625EA00F56FDB /* LaunchScreen.storyboard */; };
+		9EBBF3FA268625EB00F56FDB /* PocketSurgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF3F9268625EB00F56FDB /* PocketSurgeTests.swift */; };
+		9EBBF405268625EB00F56FDB /* PocketSurgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF404268625EB00F56FDB /* PocketSurgeUITests.swift */; };
+		9EBBF4162686300700F56FDB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF4152686300700F56FDB /* RegisterViewController.swift */; };
+		9EBBF41A2686340000F56FDB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF4192686340000F56FDB /* Extensions.swift */; };
+		9EBBF41C2686371A00F56FDB /* GlobalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF41B2686371A00F56FDB /* GlobalClass.swift */; };
+		9EEA7E2D26891F79000D328F /* AllBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E2C26891F79000D328F /* AllBillsViewController.swift */; };
+		9EEA7E32268923E0000D328F /* BudgetBreakDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E31268923E0000D328F /* BudgetBreakDownViewController.swift */; };
+		9EEA7E34268923ED000D328F /* BillsTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E33268923ED000D328F /* BillsTrackerViewController.swift */; };
+		9EEA7E36268923FA000D328F /* PayCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E35268923FA000D328F /* PayCheckViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9EBBF3F6268625EB00F56FDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EBBF3D7268625E300F56FDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EBBF3DE268625E300F56FDB;
+			remoteInfo = PocketSurge;
+		};
+		9EBBF401268625EB00F56FDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EBBF3D7268625E300F56FDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EBBF3DE268625E300F56FDB;
+			remoteInfo = PocketSurge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61AE065122650CE5E892970E /* Pods_PocketSurge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketSurge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C9D7A30F5525F8FA6674908 /* Pods-PocketSurge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketSurge.debug.xcconfig"; path = "Target Support Files/Pods-PocketSurge/Pods-PocketSurge.debug.xcconfig"; sourceTree = "<group>"; };
+		9E330F32268A510B00E99152 /* AddBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillsViewController.swift; sourceTree = "<group>"; };
+		9E330F35268A5EA900E99152 /* BillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTableViewCell.swift; sourceTree = "<group>"; };
+		9EA34C2D2689188B00B2E8DB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		9EBBF3DF268625E300F56FDB /* PocketSurge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketSurge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EBBF3E2268625E300F56FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9EBBF3E4268625E300F56FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9EBBF3E6268625E300F56FDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9EBBF3E9268625E300F56FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9EBBF3EB268625EA00F56FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EBBF3EE268625EA00F56FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9EBBF3F0268625EA00F56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EBBF3F5268625EB00F56FDB /* PocketSurgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketSurgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EBBF3F9268625EB00F56FDB /* PocketSurgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketSurgeTests.swift; sourceTree = "<group>"; };
+		9EBBF3FB268625EB00F56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EBBF400268625EB00F56FDB /* PocketSurgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketSurgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EBBF404268625EB00F56FDB /* PocketSurgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketSurgeUITests.swift; sourceTree = "<group>"; };
+		9EBBF406268625EB00F56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EBBF4152686300700F56FDB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9EBBF4192686340000F56FDB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9EBBF41B2686371A00F56FDB /* GlobalClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalClass.swift; sourceTree = "<group>"; };
+		9EEA7E2C26891F79000D328F /* AllBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBillsViewController.swift; sourceTree = "<group>"; };
+		9EEA7E31268923E0000D328F /* BudgetBreakDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetBreakDownViewController.swift; sourceTree = "<group>"; };
+		9EEA7E33268923ED000D328F /* BillsTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTrackerViewController.swift; sourceTree = "<group>"; };
+		9EEA7E35268923FA000D328F /* PayCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCheckViewController.swift; sourceTree = "<group>"; };
+		A67C731191DD680B5C22C66E /* Pods-PocketSurge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketSurge.release.xcconfig"; path = "Target Support Files/Pods-PocketSurge/Pods-PocketSurge.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EBBF3DC268625E300F56FDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				608F19E1B13101C2B369E74D /* Pods_PocketSurge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EBBF3F2268625EB00F56FDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EBBF3FD268625EB00F56FDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03342CB719B60092E1400719 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C9D7A30F5525F8FA6674908 /* Pods-PocketSurge.debug.xcconfig */,
+				A67C731191DD680B5C22C66E /* Pods-PocketSurge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E330F34268A5E9100E99152 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9E330F35268A5EA900E99152 /* BillsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9EA34C2C2689181900B2E8DB /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				9EA34C2D2689188B00B2E8DB /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		9EBBF3D6268625E300F56FDB = {
+			isa = PBXGroup;
+			children = (
+				9EBBF3E1268625E300F56FDB /* PocketSurge */,
+				9EBBF3F8268625EB00F56FDB /* PocketSurgeTests */,
+				9EBBF403268625EB00F56FDB /* PocketSurgeUITests */,
+				9EBBF3E0268625E300F56FDB /* Products */,
+				03342CB719B60092E1400719 /* Pods */,
+				D196918C689461D4A9F60437 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9EBBF3E0268625E300F56FDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EBBF3DF268625E300F56FDB /* PocketSurge.app */,
+				9EBBF3F5268625EB00F56FDB /* PocketSurgeTests.xctest */,
+				9EBBF400268625EB00F56FDB /* PocketSurgeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EBBF3E1268625E300F56FDB /* PocketSurge */ = {
+			isa = PBXGroup;
+			children = (
+				9EBBF418268630D000F56FDB /* View+Extensions */,
+				9EBBF417268630C600F56FDB /* Common Functions */,
+				9EBBF41326862DE100F56FDB /* ViewController */,
+				9EBBF41226862D9800F56FDB /* Delegates & info */,
+				9EBBF41426862DED00F56FDB /* Storyboard */,
+				9EBBF3EB268625EA00F56FDB /* Assets.xcassets */,
+			);
+			path = PocketSurge;
+			sourceTree = "<group>";
+		};
+		9EBBF3F8268625EB00F56FDB /* PocketSurgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9EBBF3F9268625EB00F56FDB /* PocketSurgeTests.swift */,
+				9EBBF3FB268625EB00F56FDB /* Info.plist */,
+			);
+			path = PocketSurgeTests;
+			sourceTree = "<group>";
+		};
+		9EBBF403268625EB00F56FDB /* PocketSurgeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9EBBF404268625EB00F56FDB /* PocketSurgeUITests.swift */,
+				9EBBF406268625EB00F56FDB /* Info.plist */,
+			);
+			path = PocketSurgeUITests;
+			sourceTree = "<group>";
+		};
+		9EBBF41226862D9800F56FDB /* Delegates & info */ = {
+			isa = PBXGroup;
+			children = (
+				9EBBF3E2268625E300F56FDB /* AppDelegate.swift */,
+				9EBBF3E4268625E300F56FDB /* SceneDelegate.swift */,
+				9EBBF3F0268625EA00F56FDB /* Info.plist */,
+			);
+			path = "Delegates & info";
+			sourceTree = "<group>";
+		};
+		9EBBF41326862DE100F56FDB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA7E30268923C4000D328F /* PayCheck Calculator */,
+				9EEA7E2F268923BC000D328F /* Bills Tracker */,
+				9EEA7E2E268923AF000D328F /* Budget BreakDown */,
+				9EEA7E2B26891E7F000D328F /* All Bills */,
+				9EA34C2C2689181900B2E8DB /* Dashboard */,
+				9EBBF3E6268625E300F56FDB /* LoginViewController.swift */,
+				9EBBF4152686300700F56FDB /* RegisterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9EBBF41426862DED00F56FDB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9EBBF3ED268625EA00F56FDB /* LaunchScreen.storyboard */,
+				9EBBF3E8268625E300F56FDB /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9EBBF417268630C600F56FDB /* Common Functions */ = {
+			isa = PBXGroup;
+			children = (
+				9EBBF41B2686371A00F56FDB /* GlobalClass.swift */,
+			);
+			path = "Common Functions";
+			sourceTree = "<group>";
+		};
+		9EBBF418268630D000F56FDB /* View+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9EBBF4192686340000F56FDB /* Extensions.swift */,
+			);
+			path = "View+Extensions";
+			sourceTree = "<group>";
+		};
+		9EEA7E2B26891E7F000D328F /* All Bills */ = {
+			isa = PBXGroup;
+			children = (
+				9E330F34268A5E9100E99152 /* Cells */,
+				9EEA7E2C26891F79000D328F /* AllBillsViewController.swift */,
+				9E330F32268A510B00E99152 /* AddBillsViewController.swift */,
+			);
+			path = "All Bills";
+			sourceTree = "<group>";
+		};
+		9EEA7E2E268923AF000D328F /* Budget BreakDown */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA7E31268923E0000D328F /* BudgetBreakDownViewController.swift */,
+			);
+			path = "Budget BreakDown";
+			sourceTree = "<group>";
+		};
+		9EEA7E2F268923BC000D328F /* Bills Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA7E33268923ED000D328F /* BillsTrackerViewController.swift */,
+			);
+			path = "Bills Tracker";
+			sourceTree = "<group>";
+		};
+		9EEA7E30268923C4000D328F /* PayCheck Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA7E35268923FA000D328F /* PayCheckViewController.swift */,
+			);
+			path = "PayCheck Calculator";
+			sourceTree = "<group>";
+		};
+		D196918C689461D4A9F60437 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61AE065122650CE5E892970E /* Pods_PocketSurge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EBBF3DE268625E300F56FDB /* PocketSurge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EBBF409268625EB00F56FDB /* Build configuration list for PBXNativeTarget "PocketSurge" */;
+			buildPhases = (
+				03A20C74B00F59CE07D280EC /* [CP] Check Pods Manifest.lock */,
+				9EBBF3DB268625E300F56FDB /* Sources */,
+				9EBBF3DC268625E300F56FDB /* Frameworks */,
+				9EBBF3DD268625E300F56FDB /* Resources */,
+				065BD8AEE0A495008B10B61F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketSurge;
+			productName = PocketSurge;
+			productReference = 9EBBF3DF268625E300F56FDB /* PocketSurge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9EBBF3F4268625EB00F56FDB /* PocketSurgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EBBF40C268625EB00F56FDB /* Build configuration list for PBXNativeTarget "PocketSurgeTests" */;
+			buildPhases = (
+				9EBBF3F1268625EB00F56FDB /* Sources */,
+				9EBBF3F2268625EB00F56FDB /* Frameworks */,
+				9EBBF3F3268625EB00F56FDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EBBF3F7268625EB00F56FDB /* PBXTargetDependency */,
+			);
+			name = PocketSurgeTests;
+			productName = PocketSurgeTests;
+			productReference = 9EBBF3F5268625EB00F56FDB /* PocketSurgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9EBBF3FF268625EB00F56FDB /* PocketSurgeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EBBF40F268625EB00F56FDB /* Build configuration list for PBXNativeTarget "PocketSurgeUITests" */;
+			buildPhases = (
+				9EBBF3FC268625EB00F56FDB /* Sources */,
+				9EBBF3FD268625EB00F56FDB /* Frameworks */,
+				9EBBF3FE268625EB00F56FDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EBBF402268625EB00F56FDB /* PBXTargetDependency */,
+			);
+			name = PocketSurgeUITests;
+			productName = PocketSurgeUITests;
+			productReference = 9EBBF400268625EB00F56FDB /* PocketSurgeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EBBF3D7268625E300F56FDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9EBBF3DE268625E300F56FDB = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					9EBBF3F4268625EB00F56FDB = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 9EBBF3DE268625E300F56FDB;
+					};
+					9EBBF3FF268625EB00F56FDB = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 9EBBF3DE268625E300F56FDB;
+					};
+				};
+			};
+			buildConfigurationList = 9EBBF3DA268625E300F56FDB /* Build configuration list for PBXProject "PocketSurge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9EBBF3D6268625E300F56FDB;
+			productRefGroup = 9EBBF3E0268625E300F56FDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EBBF3DE268625E300F56FDB /* PocketSurge */,
+				9EBBF3F4268625EB00F56FDB /* PocketSurgeTests */,
+				9EBBF3FF268625EB00F56FDB /* PocketSurgeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EBBF3DD268625E300F56FDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBBF3EF268625EA00F56FDB /* LaunchScreen.storyboard in Resources */,
+				9EBBF3EC268625EA00F56FDB /* Assets.xcassets in Resources */,
+				9EBBF3EA268625E300F56FDB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EBBF3F3268625EB00F56FDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EBBF3FE268625EB00F56FDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03A20C74B00F59CE07D280EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PocketSurge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		065BD8AEE0A495008B10B61F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PocketSurge/Pods-PocketSurge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PocketSurge/Pods-PocketSurge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PocketSurge/Pods-PocketSurge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EBBF3DB268625E300F56FDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBBF41A2686340000F56FDB /* Extensions.swift in Sources */,
+				9EA34C2E2689188B00B2E8DB /* DashboardViewController.swift in Sources */,
+				9EBBF3E7268625E300F56FDB /* LoginViewController.swift in Sources */,
+				9EEA7E32268923E0000D328F /* BudgetBreakDownViewController.swift in Sources */,
+				9EEA7E36268923FA000D328F /* PayCheckViewController.swift in Sources */,
+				9EEA7E34268923ED000D328F /* BillsTrackerViewController.swift in Sources */,
+				9EBBF3E3268625E300F56FDB /* AppDelegate.swift in Sources */,
+				9E330F36268A5EA900E99152 /* BillsTableViewCell.swift in Sources */,
+				9EBBF3E5268625E300F56FDB /* SceneDelegate.swift in Sources */,
+				9EEA7E2D26891F79000D328F /* AllBillsViewController.swift in Sources */,
+				9E330F33268A510B00E99152 /* AddBillsViewController.swift in Sources */,
+				9EBBF4162686300700F56FDB /* RegisterViewController.swift in Sources */,
+				9EBBF41C2686371A00F56FDB /* GlobalClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EBBF3F1268625EB00F56FDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBBF3FA268625EB00F56FDB /* PocketSurgeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EBBF3FC268625EB00F56FDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBBF405268625EB00F56FDB /* PocketSurgeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9EBBF3F7268625EB00F56FDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EBBF3DE268625E300F56FDB /* PocketSurge */;
+			targetProxy = 9EBBF3F6268625EB00F56FDB /* PBXContainerItemProxy */;
+		};
+		9EBBF402268625EB00F56FDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EBBF3DE268625E300F56FDB /* PocketSurge */;
+			targetProxy = 9EBBF401268625EB00F56FDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9EBBF3E8268625E300F56FDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EBBF3E9268625E300F56FDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9EBBF3ED268625EA00F56FDB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EBBF3EE268625EA00F56FDB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EBBF407268625EB00F56FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9EBBF408268625EB00F56FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EBBF40A268625EB00F56FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C9D7A30F5525F8FA6674908 /* Pods-PocketSurge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQB33K4HKY;
+				INFOPLIST_FILE = "PocketSurge/Delegates & info/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketsurge.PocketSurge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9EBBF40B268625EB00F56FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A67C731191DD680B5C22C66E /* Pods-PocketSurge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQB33K4HKY;
+				INFOPLIST_FILE = "PocketSurge/Delegates & info/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketsurge.PocketSurge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9EBBF40D268625EB00F56FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQB33K4HKY;
+				INFOPLIST_FILE = PocketSurgeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketsurge.PocketSurgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketSurge.app/PocketSurge";
+			};
+			name = Debug;
+		};
+		9EBBF40E268625EB00F56FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQB33K4HKY;
+				INFOPLIST_FILE = PocketSurgeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketsurge.PocketSurgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketSurge.app/PocketSurge";
+			};
+			name = Release;
+		};
+		9EBBF410268625EB00F56FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQB33K4HKY;
+				INFOPLIST_FILE = PocketSurgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketsurge.PocketSurgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocketSurge;
+			};
+			name = Debug;
+		};
+		9EBBF411268625EB00F56FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQB33K4HKY;
+				INFOPLIST_FILE = PocketSurgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketsurge.PocketSurgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocketSurge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EBBF3DA268625E300F56FDB /* Build configuration list for PBXProject "PocketSurge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EBBF407268625EB00F56FDB /* Debug */,
+				9EBBF408268625EB00F56FDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EBBF409268625EB00F56FDB /* Build configuration list for PBXNativeTarget "PocketSurge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EBBF40A268625EB00F56FDB /* Debug */,
+				9EBBF40B268625EB00F56FDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EBBF40C268625EB00F56FDB /* Build configuration list for PBXNativeTarget "PocketSurgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EBBF40D268625EB00F56FDB /* Debug */,
+				9EBBF40E268625EB00F56FDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EBBF40F268625EB00F56FDB /* Build configuration list for PBXNativeTarget "PocketSurgeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EBBF410268625EB00F56FDB /* Debug */,
+				9EBBF411268625EB00F56FDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9EBBF3D7268625E300F56FDB /* Project object */;
+}
