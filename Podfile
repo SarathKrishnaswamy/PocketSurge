@@ -13,5 +13,7 @@ target 'PocketSurge' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'ReachabilitySwift'
   pod 'ProgressHUD'
+  pod 'PieCharts'
+ 
 
 end

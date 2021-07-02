@@ -26,6 +26,7 @@
 		9EEA7E32268923E0000D328F /* BudgetBreakDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E31268923E0000D328F /* BudgetBreakDownViewController.swift */; };
 		9EEA7E34268923ED000D328F /* BillsTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E33268923ED000D328F /* BillsTrackerViewController.swift */; };
 		9EEA7E36268923FA000D328F /* PayCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E35268923FA000D328F /* PayCheckViewController.swift */; };
+		9EEE6B66268F764D00489521 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE6B65268F764D00489521 /* CategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		9EEA7E31268923E0000D328F /* BudgetBreakDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetBreakDownViewController.swift; sourceTree = "<group>"; };
 		9EEA7E33268923ED000D328F /* BillsTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTrackerViewController.swift; sourceTree = "<group>"; };
 		9EEA7E35268923FA000D328F /* PayCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCheckViewController.swift; sourceTree = "<group>"; };
+		9EEE6B60268F61E400489521 /* AnyChartiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnyChartiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EEE6B65268F764D00489521 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		A67C731191DD680B5C22C66E /* Pods-PocketSurge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketSurge.release.xcconfig"; path = "Target Support Files/Pods-PocketSurge/Pods-PocketSurge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +244,7 @@
 		9EEA7E2E268923AF000D328F /* Budget BreakDown */ = {
 			isa = PBXGroup;
 			children = (
+				9EEE6B64268F762400489521 /* cells */,
 				9EEA7E31268923E0000D328F /* BudgetBreakDownViewController.swift */,
 			);
 			path = "Budget BreakDown";
@@ -262,9 +266,18 @@
 			path = "PayCheck Calculator";
 			sourceTree = "<group>";
 		};
+		9EEE6B64268F762400489521 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				9EEE6B65268F764D00489521 /* CategoryTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		D196918C689461D4A9F60437 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9EEE6B60268F61E400489521 /* AnyChartiOS.framework */,
 				61AE065122650CE5E892970E /* Pods_PocketSurge.framework */,
 			);
 			name = Frameworks;
@@ -455,6 +468,7 @@
 				9EBBF3E5268625E300F56FDB /* SceneDelegate.swift in Sources */,
 				9EEA7E2D26891F79000D328F /* AllBillsViewController.swift in Sources */,
 				9E330F33268A510B00E99152 /* AddBillsViewController.swift in Sources */,
+				9EEE6B66268F764D00489521 /* CategoryTableViewCell.swift in Sources */,
 				9EBBF4162686300700F56FDB /* RegisterViewController.swift in Sources */,
 				9EBBF41C2686371A00F56FDB /* GlobalClass.swift in Sources */,
 			);
