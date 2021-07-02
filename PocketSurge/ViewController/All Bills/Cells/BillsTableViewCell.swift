@@ -13,6 +13,8 @@ class BillsTableViewCell: UITableViewCell {
     @IBOutlet weak var TitleLbl: UILabel!
     @IBOutlet weak var CatLbl: UILabel!
     @IBOutlet weak var AmountLbl: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

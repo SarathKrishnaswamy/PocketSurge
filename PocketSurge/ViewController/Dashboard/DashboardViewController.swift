@@ -9,6 +9,7 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    //MARK:- Connection outlet
     @IBOutlet weak var IntervalLbl: UILabel!
     @IBOutlet weak var UsernameLbl: UILabel!
     @IBOutlet weak var TimeLbl: UILabel!
@@ -18,11 +19,12 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var PacheckCalculatorView: UIView!
     @IBOutlet weak var BgView: UIView!
     
+    //MARK:- set variable
     var timer : Timer!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.903811574, green: 0.9649361968, blue: 0.9970988631, alpha: 1)
-        //navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
         navigationController?.setNavigationBarHidden(true, animated: true)
         navigationItem.hidesBackButton = true
         initialsetup()
@@ -30,8 +32,7 @@ class DashboardViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
-        //navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.903811574, green: 0.9649361968, blue: 0.9970988631, alpha: 1)
-        //navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        
         navigationController?.setNavigationBarHidden(true, animated: true)
         navigationItem.hidesBackButton = true
     }
@@ -42,6 +43,8 @@ class DashboardViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.hidesBackButton = false
     }
+    
+    //MARK:- Initial Setup
     func initialsetup(){
         let hour = Calendar.current.component(.hour, from: Date())
         switch hour {
@@ -57,9 +60,11 @@ class DashboardViewController: UIViewController {
         PacheckCalculatorView.layer.cornerRadius = 5.0
         BgView.layer.cornerRadius = 50.0
         BgView.layer.masksToBounds = true
+        //Set timer
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(time), userInfo: nil, repeats: true)
     }
     
+    //MARK:- Get current time
     @objc func time(){
         // get the current date and time
         let currentDateTime = Date()
@@ -71,38 +76,45 @@ class DashboardViewController: UIViewController {
         self.TimeLbl.text = formatter.string(from: currentDateTime)
     }
     
+    //MARK:- All bills Page
     func allbills(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "AllBillsViewController") as! AllBillsViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
+    //MARK:- Budget breakdown page
     func budgetbreakdown(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "BudgetBreakDownViewController") as! BudgetBreakDownViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    //MARK:- Bills tracker page
     func BillsTracker(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "BillsTrackerViewController") as! BillsTrackerViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    //MARK:- pay check page
     func paycheck(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "PayCheckViewController") as! PayCheckViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    //MARK:- All bills Btn Connection
     @IBAction func AllBillsBtnOnPressed(_ sender: Any) {
         allbills()
     }
     
+    //MARK:-Budget breakdown Btn Connection
     @IBAction func BudgetBreakDownBtnOnPressed(_ sender: Any) {
         budgetbreakdown()
     }
     
+    //MARK:-Bills Tracker Btn Connection
     @IBAction func BillsBreakDownOnPressed(_ sender: Any) {
         BillsTracker()
     }
     
+    //MARK:-Pay check Btn Connection
     @IBAction func PaycheckBtnOnPressed(_ sender: Any) {
         paycheck()
     }

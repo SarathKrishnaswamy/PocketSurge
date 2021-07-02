@@ -9,8 +9,11 @@ import UIKit
 import PieCharts
 
 class BudgetBreakDownViewController: UIViewController,PieChartDelegate {
+    //MARK:- Connection outlet
     @IBOutlet weak var chartView: PieChart!
     @IBOutlet weak var TableView: UITableView!
+   
+    //MARK:- variable
     var category = ["Accommodation","Entertainment","Groceries","Restaurants","Transport"]
     var category_image = [UIImage(systemName: "globe"),UIImage(systemName: "video"),UIImage(systemName: "cart"),UIImage(systemName: "cart.fill"),UIImage(systemName: "bus")]
     var category_color = [#colorLiteral(red: 0.2050859332, green: 0.5914066434, blue: 0.9727563262, alpha: 1), #colorLiteral(red: 0.2392156863, green: 0.5450980392, blue: 0.4156862745, alpha: 1), #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), #colorLiteral(red: 0.516361177, green: 0.5748247504, blue: 0.3790351152, alpha: 1), #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) ]
@@ -22,11 +25,10 @@ class BudgetBreakDownViewController: UIViewController,PieChartDelegate {
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2050859332, green: 0.5914066434, blue: 0.9727563262, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.TableView.tableFooterView = UIView()
-        
-        
-
         // Do any additional setup after loading the view.
     }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2039215686, green: 0.5921568627, blue: 0.9725490196, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -40,7 +42,6 @@ class BudgetBreakDownViewController: UIViewController,PieChartDelegate {
     }
     
     // MARK: - Models
-    
        fileprivate static let alpha: CGFloat = 0.5
        let colors = [
            UIColor.yellow.withAlphaComponent(alpha),

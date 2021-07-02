@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //MARK:- Connection Outlet
     @IBOutlet weak var LoginHeading: UILabel!
     @IBOutlet weak var Loginbtn: UIButton!
     @IBOutlet weak var EmailTextField: UITextField!
@@ -17,6 +18,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Hide navigation bar
         self.navigationController?.navigationBar.isHidden = true
         initailSetup()
         // Do any additional setup after loading the view.
@@ -30,6 +32,7 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
     }
     
+    //MARK:- Initial setup
     func initailSetup(){
         self.Loginbtn.layer.cornerRadius = 5.0
         self.Loginbtn.titleLabel?.font = UIFont.getMediumFontWith(size: TITLE_MEDIUM)
@@ -37,19 +40,20 @@ class LoginViewController: UIViewController {
         PasswordTextField.font = UIFont.getMediumFontWith(size: TEXT_SMALL)
 
     }
-    
+    //MARK:- Call dashboard page
     func dashboard(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
 
+    //MARK:- Register button connection
     @IBAction func RegisterBtnOnPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+    //MARK:- Login button connection
     @IBAction func LoginBtnOnPressed(_ sender: Any) {
         
         if EmailTextField.text! == ""{

@@ -9,6 +9,7 @@ import UIKit
 
 class AllBillsViewController: UIViewController {
 
+    //MARK:- Connection outlet
     @IBOutlet weak var PlusBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var NoBillsImage: UIImageView!
@@ -59,12 +60,14 @@ class AllBillsViewController: UIViewController {
     }
 
 
+    //MARK:- Add bills Btn Connection
     @IBAction func AddBillsBtnOnPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AddBillsViewController") as! AddBillsViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
+//MARK:- TableView Delegate & Datasource
 extension AllBillsViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bills.Bill_title.count

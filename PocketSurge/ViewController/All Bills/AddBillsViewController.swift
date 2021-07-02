@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK:- Store the values in struct class
 struct bills {
     static var Bill_title = [String]()
     static var Bill_category = [String]()
@@ -17,12 +18,18 @@ struct bills {
 
 class AddBillsViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource {
 
+    //MARK:- Connection outlet
     @IBOutlet weak var TitleTextField: UITextField!
     @IBOutlet weak var AmountTextField: UITextField!
     @IBOutlet weak var CategoryTextField: UITextField!
+    
+    //MARK:- PickerView
     var PickerView = UIPickerView()
     
+    //MARK:- Category Array
     var category = ["Accommodation","Entertainment","Groceries","Restaurants","Transport"]
+    
+    //MARK:- Viewdidload
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -34,13 +41,14 @@ class AddBillsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         dismissPickerView()
     }
     
+    //MARK:- BeginEditing
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if CategoryTextField.isFirstResponder{
             self.PickerView.isHidden = false
         }
     }
     
-
+    //MARK:- Done BtnOn Pressed
     @IBAction func DoneBtnOnPressed(_ sender: Any) {
        
         if TitleTextField.text! == ""{
@@ -65,12 +73,14 @@ class AddBillsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         }
     }
     
+    //MARK:- Create Picker
     func createPickerView() {
         self.PickerView.delegate = self
         CategoryTextField.inputView = PickerView
         self.PickerView.reloadAllComponents()
     }
     
+    //MARK:- Dismiss Picker
     func dismissPickerView() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -84,6 +94,7 @@ class AddBillsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         view.endEditing(true)
     }
     
+    //MARK:- Picker Delegate & datasource
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
