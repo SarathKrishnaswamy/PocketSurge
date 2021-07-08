@@ -15,6 +15,12 @@ class AllBillsViewController: UIViewController {
     @IBOutlet weak var NoBillsImage: UIImageView!
     @IBOutlet weak var AddBillsLbl: UILabel!
     
+    //MARK:- Server Model
+    var get_entries : BillsModel?
+    var get_entries_data : [BillsData]?
+    var get_category : CategoryModel?
+    var get_category_data : [CategoryData]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -22,17 +28,8 @@ class AllBillsViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         tableView.tableFooterView = UIView()
         PlusBtn.layer.cornerRadius = PlusBtn.frame.width/2
-        if bills.Bill_title.count == 0{
-            self.tableView.isHidden = true
-            self.NoBillsImage.isHidden = false
-            self.AddBillsLbl.isHidden = false
-        }
-        else{
-            self.tableView.isHidden = false
-            self.NoBillsImage.isHidden = true
-            self.AddBillsLbl.isHidden = true
-            self.tableView.reloadData()
-        }
+        
+       
     }
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -42,24 +39,79 @@ class AllBillsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
-        if bills.Bill_title.count == 0{
-            self.tableView.isHidden = true
-            self.NoBillsImage.isHidden = false
-            self.AddBillsLbl.isHidden = false
-        }
-        else{
-            self.tableView.isHidden = false
-            self.NoBillsImage.isHidden = true
-            self.AddBillsLbl.isHidden = true
-            self.tableView.reloadData()
-        }
+        get_bills()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
+    //MARK:- Bills from server
+    func get_bills(){
+        let user_id = UserDefaults.standard.value(forKey: Key.UserDefaults.id) ?? ""
+        let param = ["user_id":user_id]
+        APiCall().upload(to: URL(string: URL.all_entries)!, params: param, imageData: nil, filename: "", documentData: nil) { bool, response in
+            print(response)
+            self.get_entries = BillsModel(response)
+            self.get_entries_data = self.get_entries?.bills_data
+            if self.get_entries?.status == "200"{
+                if self.get_entries_data?.count == 0{
+                    self.tableView.isHidden = true
+                    self.NoBillsImage.isHidden = false
+                    self.AddBillsLbl.isHidden = false
+                }
+                else{
+                    self.tableView.isHidden = false
+                    self.NoBillsImage.isHidden = true
+                    self.AddBillsLbl.isHidden = true
+                    self.get_from_server()
+                    
+                }
+            }
+            else{
+                self.presentAlert(withTitle: "Info", message: self.get_entries?.message ?? "")
+            }
+        }
+    }
+    
+    //MARK:- Get category
+    func get_from_server(){
+        let param = ["":""]
+        APiCall().callAPi(strURL: URL.all_categories, methodType: "GET", postDictionary: param) { bool, response, int in
+            //print(response)
+            self.get_category = CategoryModel(response)
+            if self.get_category?.status == "200"{
+                self.get_category_data = self.get_category?.Category_Data
+                self.tableView.reloadData()
+            }
+            else{
+                self.presentAlert(withTitle: "Info", message: self.get_category?.message ?? "")
+            }
+        }
+    }
+    
+    //MARK:- Delete values
+    func delete_value(entry_id : String){
+        let param = ["entry_id": entry_id]
+        APiCall().upload(to: URL(string: URL.delete_entry)!, params: param, imageData: nil, filename: "", documentData: nil) { bool, response in
+            print(response)
+            let success = response["success"].stringValue
+            let message = response["message"].stringValue
+            if success == "200"{
+                
+                    self.tableView.isHidden = false
+                    self.NoBillsImage.isHidden = true
+                    self.AddBillsLbl.isHidden = true
+                    self.get_bills()
+                
+            }
+            else{
+                self.presentAlert(withTitle: "Info", message: message)
+            }
+        }
+    }
 
+    
     //MARK:- Add bills Btn Connection
     @IBAction func AddBillsBtnOnPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AddBillsViewController") as! AddBillsViewController
@@ -70,14 +122,16 @@ class AllBillsViewController: UIViewController {
 //MARK:- TableView Delegate & Datasource
 extension AllBillsViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bills.Bill_title.count
+        return get_entries_data?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillsTableViewCell", for: indexPath) as! BillsTableViewCell
-        cell.TitleLbl.text = bills.Bill_title[indexPath.row]
-        cell.CatLbl.text = bills.Bill_category[indexPath.row]
-        cell.AmountLbl.text = bills.Bill_amount[indexPath.row] + "$"
+        let category_id :Int? = Int((self.get_entries_data?[indexPath.row].category_id)!)
+        let category_name = self.get_category_data?[category_id!-1].category
+        cell.TitleLbl.text = self.get_entries_data?[indexPath.row].title
+        cell.CatLbl.text = category_name
+        cell.AmountLbl.text = (get_entries_data?[indexPath.row].amount)! + "$"
         return cell
     }
     
@@ -87,23 +141,8 @@ extension AllBillsViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
             let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
-                if bills.Bill_title.count > 0{
-                    bills.Bill_title.remove(at: indexPath.row)
-                    bills.Bill_category.remove(at: indexPath.row)
-                    bills.Bill_amount.remove(at: indexPath.row)
-                    self.tableView.reloadData()
-                }
-                if bills.Bill_title.count == 0{
-                    self.tableView.isHidden = true
-                    self.NoBillsImage.isHidden = false
-                    self.AddBillsLbl.isHidden = false
-                }
-                else{
-                    self.tableView.isHidden = false
-                    self.NoBillsImage.isHidden = true
-                    self.AddBillsLbl.isHidden = true
-                    self.tableView.reloadData()
-                }
+                let entry_id = (self.get_entries_data?[indexPath.row].id)
+                self.delete_value(entry_id: entry_id!)
                 
             }
             let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction])

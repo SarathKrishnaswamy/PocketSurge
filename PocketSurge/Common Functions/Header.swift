@@ -1,16 +1,18 @@
 //
-//  Extensions.swift
+//  Header.swift
 //  PocketSurge
 //
-//  Created by J.Sarath Krishnaswamy on 25/06/21.
+//  Created by J.Sarath Krishnaswamy on 07/07/21.
 //
 
+import Foundation
 import Foundation
 import UIKit
 import AVFoundation
 
 let APPDELEGATE = UIApplication.shared.delegate as! AppDelegate
 let SCENEDELEGATE = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
+let COMMONFUNCTION = CommonFunctions.shared
 
 
 var NETWORK_CONNECTION_STATUS = false
@@ -32,6 +34,7 @@ let IS_IPHONE_6 = UIScreen.main.bounds.size.height == 667
 let IS_IPHONE_6PLUS = UIScreen.main.bounds.size.height == 736
 let DEVICE_ID = UIDevice.current.identifierForVendor?.uuidString
 let IOS_VERSION = UIDevice.current.systemVersion
+
 let VALID_EMAIL_ALERT = "Please enter valid email address"
 let VALID_PWD_ALERT = "Please enter valid password"
 let VALID_USERNAME_ALERT = "Please enter valid username"
@@ -62,6 +65,10 @@ let NAVIGATIONBAR_FONT:CGFloat = IS_IPAD ? 22 : 18.0
 let BARBUTTON_TEXT_FONT: CGFloat = IS_IPAD ? 20.0 : 15.0
 let PROFILE_NAME_FONT :  CGFloat = IS_IPAD ? 45.0 : 40.0
 let PROFILE_LIKES_FONT :  CGFloat = IS_IPAD ? 15.0 : 10.0
+
+//MARK:- Alert Message
+let NO_NETWORK_ALERT = "Please check your network connection"
+let LOGOUT_ALERT = "Are you sure, Do you want to logout?"
 
 extension UIViewController {
 

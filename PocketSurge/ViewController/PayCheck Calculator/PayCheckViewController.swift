@@ -48,6 +48,8 @@ class PayCheckViewController: UIViewController,UITextFieldDelegate {
     
     //MARK:- Calculate Method
     func calculate(){
+        PayRateTextField.resignFirstResponder()
+        HourlyWorkedTextField.resignFirstResponder()
         let a = Float(PayRateTextField.text!)!
         let b = Float(HourlyWorkedTextField.text!)!
         let c = (a) * (b)

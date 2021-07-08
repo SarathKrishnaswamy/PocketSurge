@@ -23,6 +23,11 @@ class AddBillsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
     @IBOutlet weak var AmountTextField: UITextField!
     @IBOutlet weak var CategoryTextField: UITextField!
     
+    //MARK:- Server Model
+    var get_category : CategoryModel?
+    var get_category_data : [CategoryData]?
+    var category_id : String!
+    
     //MARK:- PickerView
     var PickerView = UIPickerView()
     
@@ -39,6 +44,41 @@ class AddBillsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         self.CategoryTextField.delegate = self
         createPickerView()
         dismissPickerView()
+        get_from_server()
+    }
+    
+    //MARK:- Get category
+    func get_from_server(){
+        let param = ["":""]
+        APiCall().callAPi(strURL: URL.all_categories, methodType: "GET", postDictionary: param) { bool, response, int in
+            print(response)
+            self.get_category = CategoryModel(response)
+            if self.get_category?.status == "200"{
+                self.get_category_data = self.get_category?.Category_Data
+                self.CategoryTextField.text = self.get_category_data?[0].category
+                self.category_id = self.get_category_data?[0].id
+            }
+            else{
+                self.presentAlert(withTitle: "Info", message: self.get_category?.message ?? "")
+            }
+        }
+    }
+    
+    //MARK:- Save In Id
+    func save_bill_server(){
+        let user_id = UserDefaults.standard.value(forKey: Key.UserDefaults.id) ?? ""
+        let param = ["title":TitleTextField.text!, "category_id":self.category_id!, "amount":AmountTextField.text! , "user_id":user_id]
+        APiCall().upload(to: URL(string: URL.add_entry)!, params: param, imageData: nil, filename: "", documentData: nil) { bool, response in
+            print(response)
+            let success = response["success"].stringValue
+            let message = response["message"].stringValue
+            if success == "200"{
+                self.navigationController?.popViewController(animated: true)
+            }
+            else{
+                self.presentAlert(withTitle: "Info", message: message)
+            }
+        }
     }
     
     //MARK:- BeginEditing
@@ -62,10 +102,8 @@ class AddBillsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         }
         else{
             if ((TitleTextField.text?.isValidEmail) != nil) && CategoryTextField.text?.isEmpty != nil && AmountTextField.text?.isEmpty != nil {
-                bills.Bill_title.append(TitleTextField.text!)
-                bills.Bill_category.append(CategoryTextField.text!)
-                bills.Bill_amount.append(AmountTextField.text!)
-                self.navigationController?.popViewController(animated: true)
+                save_bill_server()
+                
             }
             else{
                 
@@ -100,15 +138,16 @@ class AddBillsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.category.count
+        return self.get_category_data?.count ?? 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.category[row]
+        return self.get_category_data?[row].category
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        CategoryTextField.text = self.category[row]
+        CategoryTextField.text = self.get_category_data?[row].category
+        self.category_id = self.get_category_data?[row].id
         self.view.endEditing(true)
        
     }

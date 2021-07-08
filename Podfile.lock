@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.4.3)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - IQKeyboardManagerSwift (6.5.6)
   - PieCharts (0.0.7)
   - ProgressHUD (13.6)
@@ -9,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Charts
   - IQKeyboardManagerSwift
   - PieCharts
   - ProgressHUD
@@ -19,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - IQKeyboardManagerSwift
     - PieCharts
     - ProgressHUD
@@ -28,6 +33,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   PieCharts: 30e50dfa7dc19e5b84e9878d32089673ef5d0453
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
@@ -35,6 +41,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 6f8f9d6dbd044a2d607313b4bceead93629f84b7
+PODFILE CHECKSUM: 87759150d03e3e974e985fda30def8b2dc0438a5
 
 COCOAPODS: 1.10.1

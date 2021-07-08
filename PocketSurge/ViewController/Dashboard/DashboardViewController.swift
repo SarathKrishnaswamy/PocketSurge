@@ -60,6 +60,8 @@ class DashboardViewController: UIViewController {
         PacheckCalculatorView.layer.cornerRadius = 5.0
         BgView.layer.cornerRadius = 50.0
         BgView.layer.masksToBounds = true
+        let name = UserDefaults.standard.value(forKey: Key.UserDefaults.name) ?? ""
+        UsernameLbl.text = name as? String
         //Set timer
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(time), userInfo: nil, repeats: true)
     }

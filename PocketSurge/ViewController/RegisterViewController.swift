@@ -25,6 +25,9 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
@@ -32,12 +35,47 @@ class RegisterViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
+    
+    
+    //MARK:- Initial setup
     func initailSetup(){
         self.RegisterBtn.layer.cornerRadius = 5.0
         self.RegisterBtn.titleLabel?.font = UIFont.getMediumFontWith(size: TITLE_MEDIUM)
         UsernameTextField.font =  UIFont.getMediumFontWith(size: TEXT_SMALL)
         EmailTextField.font =  UIFont.getMediumFontWith(size: TEXT_SMALL)
         PasswordTextField.font =  UIFont.getMediumFontWith(size: TEXT_SMALL)
+    }
+    
+    //MARK:- server
+    func register_server(){
+        let param = ["mail":EmailTextField.text! , "password":PasswordTextField.text!, "name":UsernameTextField.text! ] as [String : Any]
+        APiCall().upload(to: URL(string: URL.register)!, params: param, imageData: nil, filename: "", documentData: nil) { bool, response in
+            print(response)
+            let status = response["success"].stringValue
+            let message = response["message"].stringValue
+            let data = response["data"]
+            let id = data["id"].stringValue
+            let name = data["name"].stringValue
+            //let mail = data["mail"].stringValue
+            //let password = data["password"].stringValue
+            
+            if status == "200"{
+                UserDefaults.standard.setValue(id, forKey: Key.UserDefaults.id)
+                UserDefaults.standard.setValue(name, forKey: Key.UserDefaults.name)
+                UserDefaults.standard.setValue(true, forKey: Key.UserDefaults.alreadyLogin)
+                UserDefaults.standard.synchronize()
+                self.dashboard()
+            }
+            else if status == "201"{
+                self.presentAlert(withTitle: "Info", message: message)
+            }
+        }
+    }
+    
+    //MARK:- Call dashboard page
+    func dashboard(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func RegisterBtnOnPressed(_ sender: Any) {
@@ -52,7 +90,7 @@ class RegisterViewController: UIViewController {
         }
         else{
             if ((EmailTextField.text?.isValidEmail) != nil) && PasswordTextField.text?.isEmpty != nil && UsernameTextField.text != nil {
-                
+                register_server()
             }else{
                 self.presentAlert(withTitle: "", message: VALID_PWD_EMAIL)
             }

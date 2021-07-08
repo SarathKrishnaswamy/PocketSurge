@@ -18,7 +18,7 @@ class BillsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        TitleLbl.font = UIFont.getMediumFontWith(size: TEXT_MEDIUM)
+       TitleLbl.font = UIFont.getMediumFontWith(size: TEXT_MEDIUM)
         CatLbl.font = UIFont.getRegularFontWith(size: TEXT_SMALL)
         AmountLbl.font = UIFont.getMediumFontWith(size: TEXT_SMALL)
     }

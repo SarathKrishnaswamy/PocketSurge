@@ -8,8 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		608F19E1B13101C2B369E74D /* Pods_PocketSurge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AE065122650CE5E892970E /* Pods_PocketSurge.framework */; };
+		9E307B202695E47F00B0C6A8 /* URLStagging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B1F2695E47F00B0C6A8 /* URLStagging.swift */; };
+		9E307B232695E6E600B0C6A8 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B222695E6E600B0C6A8 /* Server.swift */; };
+		9E307B252695E73800B0C6A8 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B242695E73800B0C6A8 /* CommonFunctions.swift */; };
+		9E307B272695E76200B0C6A8 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B262695E76200B0C6A8 /* Header.swift */; };
+		9E307B292695E83800B0C6A8 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B282695E83800B0C6A8 /* Connectivity.swift */; };
+		9E307B2C2696251C00B0C6A8 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B2B2696251C00B0C6A8 /* CategoryModel.swift */; };
+		9E307B2E2696252900B0C6A8 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B2D2696252900B0C6A8 /* CategoryData.swift */; };
+		9E307B3026962C5000B0C6A8 /* BillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B2F26962C5000B0C6A8 /* BillsModel.swift */; };
+		9E307B3226962C5C00B0C6A8 /* BillsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E307B3126962C5C00B0C6A8 /* BillsData.swift */; };
 		9E330F33268A510B00E99152 /* AddBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E330F32268A510B00E99152 /* AddBillsViewController.swift */; };
 		9E330F36268A5EA900E99152 /* BillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E330F35268A5EA900E99152 /* BillsTableViewCell.swift */; };
+		9E8921CC26977C6C00BFF623 /* HeaderMonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8921CB26977C6C00BFF623 /* HeaderMonthTableViewCell.swift */; };
 		9EA34C2E2689188B00B2E8DB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA34C2D2689188B00B2E8DB /* DashboardViewController.swift */; };
 		9EBBF3E3268625E300F56FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF3E2268625E300F56FDB /* AppDelegate.swift */; };
 		9EBBF3E5268625E300F56FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF3E4268625E300F56FDB /* SceneDelegate.swift */; };
@@ -20,13 +30,13 @@
 		9EBBF3FA268625EB00F56FDB /* PocketSurgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF3F9268625EB00F56FDB /* PocketSurgeTests.swift */; };
 		9EBBF405268625EB00F56FDB /* PocketSurgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF404268625EB00F56FDB /* PocketSurgeUITests.swift */; };
 		9EBBF4162686300700F56FDB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF4152686300700F56FDB /* RegisterViewController.swift */; };
-		9EBBF41A2686340000F56FDB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF4192686340000F56FDB /* Extensions.swift */; };
 		9EBBF41C2686371A00F56FDB /* GlobalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBBF41B2686371A00F56FDB /* GlobalClass.swift */; };
 		9EEA7E2D26891F79000D328F /* AllBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E2C26891F79000D328F /* AllBillsViewController.swift */; };
 		9EEA7E32268923E0000D328F /* BudgetBreakDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E31268923E0000D328F /* BudgetBreakDownViewController.swift */; };
 		9EEA7E34268923ED000D328F /* BillsTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E33268923ED000D328F /* BillsTrackerViewController.swift */; };
 		9EEA7E36268923FA000D328F /* PayCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA7E35268923FA000D328F /* PayCheckViewController.swift */; };
 		9EEE6B66268F764D00489521 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE6B65268F764D00489521 /* CategoryTableViewCell.swift */; };
+		9EFA207226924EC8000F6F32 /* KeyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA207126924EC8000F6F32 /* KeyConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +59,18 @@
 /* Begin PBXFileReference section */
 		61AE065122650CE5E892970E /* Pods_PocketSurge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketSurge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9D7A30F5525F8FA6674908 /* Pods-PocketSurge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketSurge.debug.xcconfig"; path = "Target Support Files/Pods-PocketSurge/Pods-PocketSurge.debug.xcconfig"; sourceTree = "<group>"; };
+		9E307B1F2695E47F00B0C6A8 /* URLStagging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStagging.swift; sourceTree = "<group>"; };
+		9E307B222695E6E600B0C6A8 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		9E307B242695E73800B0C6A8 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		9E307B262695E76200B0C6A8 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		9E307B282695E83800B0C6A8 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		9E307B2B2696251C00B0C6A8 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		9E307B2D2696252900B0C6A8 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		9E307B2F26962C5000B0C6A8 /* BillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsModel.swift; sourceTree = "<group>"; };
+		9E307B3126962C5C00B0C6A8 /* BillsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsData.swift; sourceTree = "<group>"; };
 		9E330F32268A510B00E99152 /* AddBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillsViewController.swift; sourceTree = "<group>"; };
 		9E330F35268A5EA900E99152 /* BillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTableViewCell.swift; sourceTree = "<group>"; };
+		9E8921CB26977C6C00BFF623 /* HeaderMonthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMonthTableViewCell.swift; sourceTree = "<group>"; };
 		9EA34C2D2689188B00B2E8DB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		9EBBF3DF268625E300F56FDB /* PocketSurge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketSurge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBBF3E2268625E300F56FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +87,6 @@
 		9EBBF404268625EB00F56FDB /* PocketSurgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketSurgeUITests.swift; sourceTree = "<group>"; };
 		9EBBF406268625EB00F56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EBBF4152686300700F56FDB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		9EBBF4192686340000F56FDB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9EBBF41B2686371A00F56FDB /* GlobalClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalClass.swift; sourceTree = "<group>"; };
 		9EEA7E2C26891F79000D328F /* AllBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBillsViewController.swift; sourceTree = "<group>"; };
 		9EEA7E31268923E0000D328F /* BudgetBreakDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetBreakDownViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +94,7 @@
 		9EEA7E35268923FA000D328F /* PayCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCheckViewController.swift; sourceTree = "<group>"; };
 		9EEE6B60268F61E400489521 /* AnyChartiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnyChartiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EEE6B65268F764D00489521 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		9EFA207126924EC8000F6F32 /* KeyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyConstant.swift; sourceTree = "<group>"; };
 		A67C731191DD680B5C22C66E /* Pods-PocketSurge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketSurge.release.xcconfig"; path = "Target Support Files/Pods-PocketSurge/Pods-PocketSurge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,12 +133,39 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9E307B212695E6BF00B0C6A8 /* Server Setup */ = {
+			isa = PBXGroup;
+			children = (
+				9E307B222695E6E600B0C6A8 /* Server.swift */,
+			);
+			path = "Server Setup";
+			sourceTree = "<group>";
+		};
+		9E307B2A2696250900B0C6A8 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				9E307B2B2696251C00B0C6A8 /* CategoryModel.swift */,
+				9E307B2D2696252900B0C6A8 /* CategoryData.swift */,
+				9E307B2F26962C5000B0C6A8 /* BillsModel.swift */,
+				9E307B3126962C5C00B0C6A8 /* BillsData.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
 		9E330F34268A5E9100E99152 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				9E330F35268A5EA900E99152 /* BillsTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		9E8921CA26977C2F00BFF623 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				9E8921CB26977C6C00BFF623 /* HeaderMonthTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		9EA34C2C2689181900B2E8DB /* Dashboard */ = {
@@ -154,7 +201,7 @@
 		9EBBF3E1268625E300F56FDB /* PocketSurge */ = {
 			isa = PBXGroup;
 			children = (
-				9EBBF418268630D000F56FDB /* View+Extensions */,
+				9E307B212695E6BF00B0C6A8 /* Server Setup */,
 				9EBBF417268630C600F56FDB /* Common Functions */,
 				9EBBF41326862DE100F56FDB /* ViewController */,
 				9EBBF41226862D9800F56FDB /* Delegates & info */,
@@ -219,21 +266,19 @@
 			isa = PBXGroup;
 			children = (
 				9EBBF41B2686371A00F56FDB /* GlobalClass.swift */,
+				9EFA207126924EC8000F6F32 /* KeyConstant.swift */,
+				9E307B1F2695E47F00B0C6A8 /* URLStagging.swift */,
+				9E307B242695E73800B0C6A8 /* CommonFunctions.swift */,
+				9E307B262695E76200B0C6A8 /* Header.swift */,
+				9E307B282695E83800B0C6A8 /* Connectivity.swift */,
 			);
 			path = "Common Functions";
-			sourceTree = "<group>";
-		};
-		9EBBF418268630D000F56FDB /* View+Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9EBBF4192686340000F56FDB /* Extensions.swift */,
-			);
-			path = "View+Extensions";
 			sourceTree = "<group>";
 		};
 		9EEA7E2B26891E7F000D328F /* All Bills */ = {
 			isa = PBXGroup;
 			children = (
+				9E307B2A2696250900B0C6A8 /* Server */,
 				9E330F34268A5E9100E99152 /* Cells */,
 				9EEA7E2C26891F79000D328F /* AllBillsViewController.swift */,
 				9E330F32268A510B00E99152 /* AddBillsViewController.swift */,
@@ -253,6 +298,7 @@
 		9EEA7E2F268923BC000D328F /* Bills Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				9E8921CA26977C2F00BFF623 /* cells */,
 				9EEA7E33268923ED000D328F /* BillsTrackerViewController.swift */,
 			);
 			path = "Bills Tracker";
@@ -457,9 +503,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBBF41A2686340000F56FDB /* Extensions.swift in Sources */,
+				9E307B272695E76200B0C6A8 /* Header.swift in Sources */,
+				9E307B2E2696252900B0C6A8 /* CategoryData.swift in Sources */,
+				9E307B252695E73800B0C6A8 /* CommonFunctions.swift in Sources */,
+				9E8921CC26977C6C00BFF623 /* HeaderMonthTableViewCell.swift in Sources */,
+				9E307B292695E83800B0C6A8 /* Connectivity.swift in Sources */,
 				9EA34C2E2689188B00B2E8DB /* DashboardViewController.swift in Sources */,
 				9EBBF3E7268625E300F56FDB /* LoginViewController.swift in Sources */,
+				9E307B3226962C5C00B0C6A8 /* BillsData.swift in Sources */,
+				9E307B202695E47F00B0C6A8 /* URLStagging.swift in Sources */,
 				9EEA7E32268923E0000D328F /* BudgetBreakDownViewController.swift in Sources */,
 				9EEA7E36268923FA000D328F /* PayCheckViewController.swift in Sources */,
 				9EEA7E34268923ED000D328F /* BillsTrackerViewController.swift in Sources */,
@@ -467,8 +519,12 @@
 				9E330F36268A5EA900E99152 /* BillsTableViewCell.swift in Sources */,
 				9EBBF3E5268625E300F56FDB /* SceneDelegate.swift in Sources */,
 				9EEA7E2D26891F79000D328F /* AllBillsViewController.swift in Sources */,
+				9E307B2C2696251C00B0C6A8 /* CategoryModel.swift in Sources */,
+				9EFA207226924EC8000F6F32 /* KeyConstant.swift in Sources */,
 				9E330F33268A510B00E99152 /* AddBillsViewController.swift in Sources */,
 				9EEE6B66268F764D00489521 /* CategoryTableViewCell.swift in Sources */,
+				9E307B3026962C5000B0C6A8 /* BillsModel.swift in Sources */,
+				9E307B232695E6E600B0C6A8 /* Server.swift in Sources */,
 				9EBBF4162686300700F56FDB /* RegisterViewController.swift in Sources */,
 				9EBBF41C2686371A00F56FDB /* GlobalClass.swift in Sources */,
 			);

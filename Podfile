@@ -14,6 +14,7 @@ target 'PocketSurge' do
   pod 'ReachabilitySwift'
   pod 'ProgressHUD'
   pod 'PieCharts'
+  pod 'Charts'
  
 
 end

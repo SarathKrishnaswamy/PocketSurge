@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController {
         //Hide navigation bar
         self.navigationController?.navigationBar.isHidden = true
         initailSetup()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -40,11 +42,70 @@ class LoginViewController: UIViewController {
         PasswordTextField.font = UIFont.getMediumFontWith(size: TEXT_SMALL)
 
     }
+    
+    func login_server(){
+        let param = ["mail":EmailTextField.text! , "password":PasswordTextField.text! ] as [String : Any]
+        let headers: HTTPHeaders = ["Content-Type": "text/html; charset=utf-8"]
+        AF.request(URL.login, method: .post, parameters: param, encoding:JSONEncoding.default, headers:headers).validate().responseJSON(completionHandler: {
+            respones in
+            print(URL.login)
+            print(param)
+            switch respones.result {
+            case .success( let value):
+                
+                let json  = value
+                print(json)
+                break;
+                
+            case .failure(let error):
+                debugPrint(error)
+            }
+        })
+            
+                                                                                                                                        
+                                                                
+       
+    }
+    
+    
+    func postAction() {
+        let param = ["mail":EmailTextField.text! , "password":PasswordTextField.text!]
+        APiCall().upload(to: URL(string: URL.login)!, params: param, imageData: nil, filename: "", documentData: nil) { bool, response in
+            //print(response)
+            let status = response["success"].stringValue
+            let message = response["message"].stringValue
+            let data = response["data"]
+            let id = data["id"].stringValue
+            let name = data["name"].stringValue
+            //let mail = data["mail"].stringValue
+            //let password = data["password"].stringValue
+            
+            if status == "200"{
+                UserDefaults.standard.setValue(id, forKey: Key.UserDefaults.id)
+                UserDefaults.standard.setValue(name, forKey: Key.UserDefaults.name)
+                UserDefaults.standard.setValue(true, forKey: Key.UserDefaults.alreadyLogin)
+                UserDefaults.standard.synchronize()
+                self.dashboard()
+            }
+            else if status == "201"{
+                self.presentAlert(withTitle: "Info", message: message)
+            }
+            
+           /* print(status)
+            print(message)
+            print(id)
+            print(name)
+            print(mail)
+            print(password)*/
+        }
+    }
+    
     //MARK:- Call dashboard page
     func dashboard(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     
 
     //MARK:- Register button connection
@@ -64,8 +125,7 @@ class LoginViewController: UIViewController {
         }
         else{
             if ((EmailTextField.text?.isValidEmail) != nil) && PasswordTextField.text?.isEmpty != nil{
-                dashboard()
-                
+                postAction()
             }else{
                 self.presentAlert(withTitle: "", message: VALID_PWD_EMAIL)
             }
