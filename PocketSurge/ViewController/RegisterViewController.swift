@@ -90,7 +90,21 @@ class RegisterViewController: UIViewController {
         }
         else{
             if ((EmailTextField.text?.isValidEmail) != nil) && PasswordTextField.text?.isEmpty != nil && UsernameTextField.text != nil {
-                register_server()
+                
+                if EmailTextField.text?.isValidEmail == true{
+                    if PasswordTextField.text!.count > 5{
+                       register_server()
+                   }
+                   else{
+                       self.presentAlert(withTitle: "Password Alert", message: "Please enter your password more than 5 characters")
+                   }
+                }
+                else{
+                    self.presentAlert(withTitle: "Email Alert", message: "Please Enter valid email Address")
+                }
+                
+                
+                
             }else{
                 self.presentAlert(withTitle: "", message: VALID_PWD_EMAIL)
             }
