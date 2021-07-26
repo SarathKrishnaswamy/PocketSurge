@@ -48,11 +48,11 @@ class DashboardViewController: UIViewController {
     func initialsetup(){
         let hour = Calendar.current.component(.hour, from: Date())
         switch hour {
-        case 6..<12 : IntervalLbl.text = "Happy Morning"
-        case 12 : IntervalLbl.text = "Happy Noon"
-        case 13..<17 : IntervalLbl.text = "Happy Afternoon"
-        case 17..<22 : IntervalLbl.text = "Happy Evening"
-        default: IntervalLbl.text = "Happy Night"
+        case 6..<12 : IntervalLbl.text = "Good Morning"
+        case 12 : IntervalLbl.text = "Good Noon"
+        case 13..<17 : IntervalLbl.text = "Good Afternoon"
+        case 17..<22 : IntervalLbl.text = "Good Evening"
+        default: IntervalLbl.text = "Good Night"
         }
         AllBillsView.layer.cornerRadius = 5.0
         BudgetBillsView.layer.cornerRadius = 5.0
